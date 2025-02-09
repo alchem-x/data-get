@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name         data get script
 // @namespace    https://alchem-x.github.io/data-get/
-// @version      0.1
+// @version      0.2
 // @description  data get
-// @author       Kimi
+// @author       Aerbeilu
+// @require      https://alchem-x.github.io/data-get/main.js
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
 
 ;(function () {
   'use strict'
-  console.log('Hello World')
+  console.info('data get setup')
 })()
