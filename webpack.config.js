@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
+import { VueLoaderPlugin } from 'vue-loader'
 
 /**
  * Define webpack config
@@ -18,6 +19,19 @@ export default function defineConfig(env) {
         {
           resourceQuery: /raw/,
           type: 'asset/source',
+        },
+        {
+          resourceQuery: /^((?!raw).)*$/,
+          test: /\.vue$/,
+          use: 'vue-loader',
+        },
+        {
+          test: /.css$/,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /.less$/,
+          use: ['style-loader', 'css-loader', 'less-loader'],
         },
         {
           resourceQuery: /^((?!raw).)*$/,
@@ -39,6 +53,7 @@ export default function defineConfig(env) {
       new HtmlWebpackPlugin({
         template: resolve(import.meta.dirname, 'src/index.html'),
       }),
+      new VueLoaderPlugin(),
     ],
     resolve: {
       alias: {
