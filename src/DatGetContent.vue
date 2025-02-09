@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="data-get-content-container">
     <NButton @click="onClickDownload">下载一些东西</NButton>
   </div>
 </template>
@@ -22,4 +22,8 @@ async function onClickDownload() {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.data-get-content-container {
+  text-align: left;
+}
+</style>

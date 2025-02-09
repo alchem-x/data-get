@@ -22,7 +22,7 @@ function onActivate() {
 <style scoped lang="less">
 .open-button {
   position: fixed;
-  top: 2rem;
+  top: 4rem;
   right: 1rem;
 }
 </style>
