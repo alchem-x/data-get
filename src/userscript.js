@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         data get script
 // @namespace    https://alchem-x.github.io/data-get/
-// @version      0.2
+// @version      0.3
 // @description  data get
 // @author       Aerbeilu
 // @require      https://alchem-x.github.io/data-get/main.js
@@ -11,5 +11,5 @@
 
 ;(function () {
   'use strict'
-  console.info('data get setup')
+  console.info('data-get setup')
 })()
