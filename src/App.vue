@@ -1,7 +1,7 @@
 <template>
   <div class="data-get-app-container">
     <NButton type="primary" class="open-button" @click="onActivate"> 数据抓手</NButton>
-    <NDrawer v-model:show="active" :width="502" placement="right">
+    <NDrawer v-model:show="active" :width="502" placement="right" z-index="100">
       <NDrawerContent title="数据抓手" closable>
         <DatGetContent />
       </NDrawerContent>
