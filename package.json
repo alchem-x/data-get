@@ -1,0 +1,45 @@
+{
+  "name": "more-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "watch": "webpack --watch",
+    "build": "webpack --mode=production",
+    "format": "prettier --write --cache ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchem-x/more-ui.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alchem-x/more-ui/issues"
+  },
+  "homepage": "https://github.com/alchem-x/more-ui#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.7",
+    "@emotion/css": "^11.13.5",
+    "@vue/babel-plugin-jsx": "^1.2.5",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "dayjs": "^1.11.13",
+    "html-webpack-plugin": "^5.6.3",
+    "less-loader": "^12.2.0",
+    "lodash": "^4.17.21",
+    "naive-ui": "^2.41.0",
+    "pinia": "^2.3.1",
+    "prettier": "^3.4.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.11",
+    "vue": "^3.5.13",
+    "vue-loader": "^17.4.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
