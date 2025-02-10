@@ -18,13 +18,13 @@ async function fetchData() {
       "query": "query reportDataQuery($input: GetReportDataInput) {\n  getReportData(input: $input) {\n    granularity\n    hadPrevious\n    hasNext\n    size\n    startDate\n    endDate\n    page\n    columns {\n      label\n      valueFormat\n      isGraphable\n      translationKey\n      isDefaultSortAscending\n      isDefaultGraphed\n      isDefaultSelected\n      isDefaultSortColumn\n      __typename\n    }\n    rows\n    __typename\n  }\n}\n"
     })
   })
-  return response.json()
+  return await response.json()
 }
 
 export async function downloadData() {
   const { showSaveFilePicker } = window
   try {
-    const data = fetchData()
+    const data = await fetchData()
     const handle = await showSaveFilePicker({
       suggestedName: 'data.txt',
     })
