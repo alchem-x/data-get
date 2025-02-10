@@ -1,5 +1,3 @@
-import data from '../../data/res2.json'
-
 const dataQuery = `
 query reportDataQuery($input: GetReportDataInput) {
   getReportData(input: $input) {
@@ -60,7 +58,7 @@ function convertDataToCSV(data) {
 export async function downloadData() {
   const { showSaveFilePicker } = window
   try {
-    // const data = await fetchData()
+    const data = await fetchData()
     const handle = await showSaveFilePicker({
       suggestedName: 'data.csv',
     })
