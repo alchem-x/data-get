@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue'
-import App from './App.vue'
+import App from './components/App.vue'
 import { createPinia } from 'pinia'
 
 function startApp() {
