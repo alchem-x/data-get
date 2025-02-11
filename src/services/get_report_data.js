@@ -1,4 +1,4 @@
-const dataQuery = `
+const reportDataQuery = `
 query reportDataQuery($input: GetReportDataInput) {
   getReportData(input: $input) {
     granularity
@@ -25,7 +25,7 @@ query reportDataQuery($input: GetReportDataInput) {
 }
 `
 
-async function fetchData() {
+async function fetchReportData({ startDate, endDate }) {
   const response = await fetch('https://sellercentral.amazon.com/business-reports/api', {
     method: 'POST',
     headers: {
@@ -36,12 +36,12 @@ async function fetchData() {
       variables: {
         input: {
           legacyReportId: '102:DetailSalesTrafficByChildItem',
-          startDate: '2025-01-01',
-          endDate: '2025-02-09',
+          startDate,
+          endDate,
           asins: [],
         },
       },
-      query: dataQuery.trim(),
+      query: reportDataQuery,
     }),
   })
   return await response.json()
@@ -55,12 +55,12 @@ function convertDataToCSV(data) {
   return headerLine + '\n' + content
 }
 
-export async function downloadData() {
+export async function downloadReportData({ startDate, endDate }) {
   const { showSaveFilePicker } = window
   try {
-    const data = await fetchData()
+    const data = await fetchReportData({ startDate, endDate })
     const handle = await showSaveFilePicker({
-      suggestedName: 'data.csv',
+      suggestedName: `report_data_${startDate}_${endDate}.csv`,
     })
     const writable = await handle.createWritable()
     await writable.write(new Blob([convertDataToCSV(data)]))
