@@ -1,15 +1,10 @@
 // ==UserScript==
-// @name         data get script
-// @namespace    https://alchem-x.github.io/data-get/
-// @description  data get
+// @name         sidecar ui
+// @namespace    https://alchem-x.github.io/sidecar-ui/
+// @description  sidecar ui
 // @author       Aerbeilu
-// @version      0.6
-// @require      https://alchem-x.github.io/data-get/main.js?v=0.6
+// @version      0.9
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
 
-;(function () {
-  'use strict'
-  console.info('data-get setup')
-})()
