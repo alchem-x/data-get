@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         sidecar ui
+// @name         sidecar-ui
 // @namespace    https://alchem-x.github.io/sidecar-ui/
 // @description  sidecar ui
 // @author       Aerbeilu
