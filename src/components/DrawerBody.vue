@@ -1,34 +1,21 @@
 <template>
   <div class="drawer-body-container">
-    <div class="download-report-data">
-      <NH4>下载报告数据</NH4>
-      <div class="date-range">
-        <NButton @click="onClickDownload">下载</NButton>
-        <NInput v-bind="inputProps" v-model:value="dateRange.startDate" />
-        <NInput v-bind="inputProps" v-model:value="dateRange.endDate" />
+    <div class="action-line">
+      <NH4>Sidecar Action</NH4>
+      <div class="action-content">
+        <NButton @click="onClickAction">Click</NButton>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { NButton, NInput, NH4 } from 'naive-ui'
-import { downloadReportData } from '@/services/get_report_data.js'
-import { reactive } from 'vue'
-import dayjs from 'dayjs'
+import { NButton, NH4, useMessage } from 'naive-ui'
 
-const inputProps = {
-  type: 'date',
-  placeholder: '',
-}
+const message = useMessage()
 
-const dateRange = reactive({
-  startDate: dayjs().subtract(2, 'd').format('YYYY-MM-DD'),
-  endDate: dayjs().subtract(1, 'd').format('YYYY-MM-DD'),
-})
-
-async function onClickDownload() {
-  await downloadReportData({ ...dateRange })
+async function onClickAction() {
+  message.info('Click Action')
 }
 </script>
 
@@ -36,8 +23,8 @@ async function onClickDownload() {
 .drawer-body-container {
   text-align: left;
 
-  .download-report-data {
-    .date-range {
+  .action-line {
+    .action-content {
       display: flex;
       gap: 1rem;
     }

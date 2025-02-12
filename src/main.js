@@ -1,11 +1,11 @@
 import { createApp, h } from 'vue'
-import App from './components/App.vue'
 import { createPinia } from 'pinia'
+import AppWithProvider from '@/components/AppWithProvider.vue'
 
 function startApp() {
   const app = createApp({
     render() {
-      return h(App)
+      return h(AppWithProvider)
     },
   })
   app.use(createPinia())

@@ -1,4 +1,4 @@
-# data-get
+# sidecar-ui
 
-- App: https://alchem-x.github.io/data-get/
-- Userscript: https://alchem-x.github.io/data-get/userscript.js
+- App: https://alchem-x.github.io/sidecar-ui/
+- Userscript: https://alchem-x.github.io/sidecar-ui/userscript.js

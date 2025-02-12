@@ -1,5 +1,5 @@
 {
-  "name": "data-get",
+  "name": "sidecar-ui",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alchem-x/data-get.git"
+    "url": "git+https://github.com/alchem-x/sidecar-ui.git"
   },
   "keywords": [],
   "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alchem-x/data-get/issues"
+    "url": "https://github.com/alchem-x/sidecar-ui/issues"
   },
-  "homepage": "https://github.com/alchem-x/data-get#readme",
+  "homepage": "https://github.com/alchem-x/sidecar-ui#readme",
   "description": "",
   "devDependencies": {
     "@babel/preset-env": "^7.26.7",

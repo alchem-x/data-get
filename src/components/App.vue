@@ -1,8 +1,8 @@
 <template>
   <div class="data-get-app-container">
-    <NButton type="primary" class="open-button" @click="appStore.openDrawer"> 数据抓手 </NButton>
-    <NDrawer v-model:show="appStore.drawerActive" :width="502" placement="right" z-index="100000">
-      <NDrawerContent title="数据抓手" closable>
+    <NButton type="primary" class="open-button" @click="appStore.openDrawer"> Sidecar</NButton>
+    <NDrawer v-model:show="appStore.drawerActive" placement="right">
+      <NDrawerContent title="Sidecar" closable>
         <DrawerBody />
       </NDrawerContent>
     </NDrawer>
